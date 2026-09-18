@@ -110,6 +110,26 @@
             padding-top: 20px;
         }
     </style>
+  <style>
+    /* Estilo base e transição do cartão */
+    article {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Efeito ao passar o rato (modo claro) */
+    article:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Efeito ao passar o rato (modo escuro) */
+    @media (prefers-color-scheme: dark) {
+      article:hover {
+        box-shadow: 0 12px 24px rgba(59, 130, 246, 0.4);
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -143,6 +163,3 @@
 </body>
 </html>
 
-body.dark-mode article:hover {
-  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.15);
-}
